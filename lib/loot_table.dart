@@ -152,7 +152,7 @@ class LootTable {
     return pickItem;
   }
 
-  void dropItems() {
+  List<LootTableInfo> dropItems() {
     droppedItems.clear();
 
     for (var item in items) {
@@ -168,5 +168,7 @@ class LootTable {
     for (var item in pickedItem.items) {
       droppedItems.add(item);
     }
+
+    return droppedItems;
   }
 }
